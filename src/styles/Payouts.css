@@ -1,0 +1,435 @@
+
+/* =========================
+   PAYOUTS PAGE
+========================= */
+
+.payouts-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 32px;
+  background: #f7f6f3;
+  color: #191919;
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.payouts-page * {
+  box-sizing: border-box;
+}
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.payouts-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.payouts-heading h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.payouts-heading p {
+  margin: 0;
+  color: #55524e;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.download-statement-button {
+  height: 46px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #d3cec6;
+  border-radius: 13px;
+  color: #191919;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.download-statement-button:hover {
+  background: #f0eee9;
+}
+
+/* =========================
+   NEXT PAYOUT CARD
+========================= */
+
+.next-payout-card {
+  width: 100%;
+  min-height: 251px;
+  padding: 33px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 28px;
+  background: #0c203e;
+  border-radius: 25px;
+  color: #ffffff;
+}
+
+.next-payout-details {
+  min-width: 0;
+}
+
+.next-payout-label {
+  display: block;
+  margin-bottom: 17px;
+  color: #ffc43d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.next-payout-details h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.next-payout-details p {
+  margin: 0;
+  color: #c2ccdc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   PAYOUT BREAKDOWN
+========================= */
+
+.payout-breakdown {
+  width: 100%;
+  padding: 17px;
+  background: #1d334f;
+  border-radius: 17px;
+}
+
+.payout-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  color: #c7d0de;
+  font-size: 13px;
+}
+
+.payout-breakdown > div:last-child {
+  margin-bottom: 0;
+}
+
+.payout-breakdown strong {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.payout-breakdown .payout-receive-total {
+  margin-top: 14px;
+  color: #ffc43d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.payout-receive-total strong {
+  color: #ffc43d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* =========================
+   PAYOUT TABLE
+========================= */
+
+.payout-table-wrapper {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e2ded7;
+  border-radius: 24px;
+}
+
+.payout-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+/* Table Header */
+
+.payout-table thead {
+  background: #efede9;
+}
+
+.payout-table th {
+  height: 43px;
+  padding: 0 17px;
+  color: #55524e;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid #e3dfd9;
+}
+
+.payout-table th:first-child {
+  padding-left: 17px;
+}
+
+/* Table Rows */
+
+.payout-table td {
+  height: 53px;
+  padding: 11px 17px;
+  color: #242424;
+  font-size: 13px;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e1db;
+}
+
+.payout-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.payout-table tbody tr:hover {
+  background: #fcfbf9;
+}
+
+.payout-table td strong {
+  font-weight: 600;
+}
+
+.payout-deductions {
+  color: #55524e !important;
+}
+
+/* =========================
+   PAYOUT STATUS
+========================= */
+
+.payout-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.payout-status.paid {
+  color: #00845c;
+  background: #ddf4e8;
+}
+
+.payout-status.scheduled {
+  color: #2455dc;
+  background: #e3ebff;
+}
+
+.payout-status-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* =========================
+   STATEMENT BUTTON
+========================= */
+
+.payout-statement-link {
+  padding: 5px 8px;
+  border: none;
+  background: transparent;
+  color: #806600;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.payout-statement-link:hover {
+  color: #a17d00;
+  text-decoration: underline;
+}
+
+/* =========================
+   PAYOUT ACCOUNT CARD
+========================= */
+
+.payout-account-card {
+  width: 100%;
+  min-height: 80px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: #ffffff;
+  border: 1px solid #e2ded7;
+  border-radius: 19px;
+}
+
+.payout-account-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #806600;
+  flex-shrink: 0;
+}
+
+.payout-account-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.payout-account-info strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #191919;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.payout-account-info p {
+  margin: 0;
+  color: #55524e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.payout-account-change {
+  height: 38px;
+  padding: 0 15px;
+  border: 1px solid #d3cec6;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #191919;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.payout-account-change:hover {
+  background: #f2f0ec;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .payouts-page {
+    padding: 25px;
+  }
+
+  .payouts-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .next-payout-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .next-payout-details h2 {
+    font-size: 36px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+  .payouts-page {
+    padding: 18px 12px;
+  }
+
+  .payouts-heading h1 {
+    font-size: 28px;
+  }
+
+  .payouts-heading p {
+    font-size: 13px;
+  }
+
+  .download-statement-button {
+    width: 100%;
+  }
+
+  .next-payout-card {
+    padding: 22px 17px;
+    border-radius: 18px;
+  }
+
+  .next-payout-details h2 {
+    font-size: 31px;
+  }
+
+  .next-payout-details p {
+    font-size: 12px;
+  }
+
+  .payout-breakdown {
+    padding: 13px;
+  }
+
+  .payout-breakdown > div {
+    font-size: 11px;
+    gap: 8px;
+  }
+
+  .payout-breakdown strong {
+    font-size: 11px;
+  }
+
+  .payout-receive-total strong {
+    font-size: 12px;
+  }
+
+  .payout-table-wrapper {
+    border-radius: 16px;
+  }
+
+  .payout-account-card {
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .payout-account-info p {
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .payout-account-change {
+    padding: 0 10px;
+  }
+}

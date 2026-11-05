@@ -1,0 +1,705 @@
+
+/* =========================================
+   CROWN ELITE - BOOKING DETAILS
+========================================= */
+
+.bd-content {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #17191f;
+  font-family: inherit;
+}
+
+/* Back link */
+
+.bd-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #5d5a54;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bd-back-link:hover {
+  color: #b38a25;
+}
+
+/* Notification */
+
+.bd-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border: 1px solid #b9e5cf;
+  border-radius: 12px;
+  background: #e9f8ef;
+  color: #08784e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bd-notice button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================================
+   STATUS BANNER
+========================================= */
+
+.bd-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 25px 28px;
+  margin-bottom: 24px;
+  border: 1px solid #f1d99f;
+  border-radius: 17px;
+  background: #fff1ce;
+}
+
+.bd-banner-info {
+  min-width: 0;
+}
+
+.bd-banner-time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 12px;
+  color: #986514;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.bd-banner-title {
+  margin: 0 0 10px;
+  color: #191919;
+  font-size: 23px;
+  line-height: 1.4;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.bd-banner-sub {
+  margin: 0;
+  color: #655b4a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.bd-banner-buttons {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.bd-btn-reject,
+.bd-btn-accept {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 17px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bd-btn-reject {
+  border: 1px solid #d6c9b5;
+  background: white;
+  color: #6c342c;
+}
+
+.bd-btn-reject:hover {
+  background: #fff7f4;
+  border-color: #c77b6e;
+}
+
+.bd-btn-accept {
+  border: 1px solid #0b1f3a;
+  background: #0b1f3a;
+  color: white;
+}
+
+.bd-btn-accept:hover {
+  background: #183858;
+}
+
+.bd-status-label {
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.bd-status-label.confirmed {
+  background: #d8f3e4;
+  color: #00845b;
+}
+
+.bd-status-label.rejected {
+  background: #fde2df;
+  color: #c6281d;
+}
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.bd-grid-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.85fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.bd-grid-split > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* =========================================
+   GENERAL CARDS
+========================================= */
+
+.bd-card {
+  width: 100%;
+  padding: 23px;
+  border: 1px solid #e8e4dd;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(26, 31, 42, 0.025);
+}
+
+.bd-card-title {
+  margin: 0 0 22px;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.2px;
+}
+
+/* =========================================
+   EVENT DETAILS
+========================================= */
+
+.bd-event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 30px;
+}
+
+.bd-event-item label,
+.bd-customer-note label {
+  display: block;
+  margin-bottom: 7px;
+  color: #827d75;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.bd-event-item p {
+  margin: 0;
+  color: #22252c;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+/* =========================================
+   ORDER SUMMARY
+========================================= */
+
+.bd-order-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid #efede8;
+  color: #625e58;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.bd-order-row:first-of-type {
+  padding-top: 0;
+}
+
+.bd-order-row > span:first-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.bd-order-row .amount {
+  flex-shrink: 0;
+  color: #252525;
+  font-weight: 650;
+  text-align: right;
+}
+
+.bd-order-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 19px 0;
+  border-bottom: 1px solid #e9e5dd;
+}
+
+.bd-order-total .label {
+  color: #242424;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bd-order-total .total-amount {
+  color: #0b1f3a;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.bd-customer-note {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 11px;
+  background: #f8f6f2;
+}
+
+.bd-customer-note p {
+  margin: 0;
+  color: #625e58;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   PAYMENT PLAN
+========================================= */
+
+.bd-payment-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #efede8;
+}
+
+.bd-payment-row:first-of-type {
+  padding-top: 0;
+}
+
+.bd-payment-row:last-of-type {
+  border-bottom: none;
+}
+
+.bd-pay-amount {
+  margin: 0 0 5px;
+  color: #20232a;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.bd-pay-desc {
+  margin: 0;
+  color: #817b72;
+  font-size: 12px;
+}
+
+.bd-pill-paid,
+.bd-pill-scheduled,
+.bd-pill-held {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 7px 11px;
+  border-radius: 25px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.bd-pill-paid {
+  background: #def4e8;
+  color: #00845b;
+}
+
+.bd-pill-scheduled {
+  background: #f0efed;
+  color: #77716a;
+}
+
+.bd-pill-held {
+  background: #fff1ce;
+  color: #996514;
+}
+
+.bd-dot-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.bd-dot-indicator.green {
+  background: #00845b;
+}
+
+.bd-dot-indicator.gray {
+  background: #96918a;
+}
+
+.bd-commission-sub {
+  margin: 12px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #efede8;
+  color: #817b72;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   CUSTOMER INFORMATION
+========================================= */
+
+.bd-customer-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.bd-customer-avatar {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff0cb;
+  color: #8b6818;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.bd-customer-name {
+  margin: 0 0 5px;
+  color: #1b1e26;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.bd-customer-sub {
+  margin: 0;
+  color: #817b72;
+  font-size: 12px;
+}
+
+.bd-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 14px 0;
+  color: #6b665e;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.bd-contact-row svg {
+  flex-shrink: 0;
+  color: #8a8379;
+}
+
+.bd-contact-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bd-btn-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 41px;
+  padding: 9px;
+  border: 1px solid #ded9d0;
+  border-radius: 10px;
+  background: white;
+  color: #292929;
+  font-size: 12px;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bd-btn-contact:hover {
+  border-color: #bda35e;
+  background: #fffaf0;
+}
+
+.bd-chat-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* =========================================
+   HALL AVAILABILITY
+========================================= */
+
+.bd-same-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 0;
+  border-bottom: 1px solid #efede8;
+  color: #33343a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bd-same-day-row:last-of-type {
+  border-bottom: none;
+}
+
+.bd-conflict-free {
+  margin: 13px 0 0;
+  padding: 12px;
+  border-radius: 9px;
+  background: #f2f8f3;
+  color: #528064;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BOOKING HISTORY
+========================================= */
+
+.bd-history-item {
+  position: relative;
+  padding: 0 0 19px 19px;
+  border-left: 1px solid #e4dfd6;
+}
+
+.bd-history-item:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+
+.bd-history-item::before {
+  position: absolute;
+  top: 3px;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #c6a54c;
+  content: "";
+  box-shadow: 0 0 0 1px #c6a54c;
+}
+
+.bd-history-title {
+  margin: 0 0 5px;
+  color: #34353a;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.bd-history-time {
+  margin: 0;
+  color: #8a847b;
+  font-size: 11px;
+}
+
+/* Back button */
+
+.bd-back-bookings {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #d8d1c7;
+  border-radius: 11px;
+  background: white;
+  color: #0b1f3a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bd-back-bookings:hover {
+  background: #fff1ce;
+  border-color: #e8cb83;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+  .bd-grid-split {
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.9fr);
+    gap: 16px;
+  }
+
+  .bd-card {
+    padding: 19px;
+  }
+
+  .bd-banner-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .bd-grid-split {
+    grid-template-columns: 1fr;
+  }
+
+  .bd-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bd-banner-buttons {
+    width: 100%;
+  }
+
+  .bd-banner-buttons button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .bd-banner {
+    padding: 19px;
+  }
+
+  .bd-banner-title {
+    font-size: 18px;
+  }
+
+  .bd-banner-sub {
+    font-size: 12px;
+  }
+
+  .bd-event-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 19px 12px;
+  }
+
+  .bd-card {
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .bd-card-title {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .bd-order-row {
+    font-size: 12px;
+  }
+
+  .bd-order-total .total-amount {
+    font-size: 17px;
+  }
+
+  .bd-payment-row {
+    align-items: flex-start;
+  }
+
+  .bd-pay-amount {
+    font-size: 13px;
+  }
+
+  .bd-pill-paid,
+  .bd-pill-scheduled {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .bd-event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bd-banner-buttons {
+    flex-direction: column;
+  }
+
+  .bd-banner-buttons button {
+    width: 100%;
+  }
+
+  .bd-contact-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark navy booking banner */
+.bd-banner {
+  background: #0b1f3a;
+  border: 1px solid #0b1f3a;
+  color: #ffffff;
+}
+
+/* Heading white */
+.bd-banner-title {
+  color: #ffffff;
+}
+
+/* Description white */
+.bd-banner-sub {
+  color: #dce4ef;
+}
+
+/* Reply time white/gold */
+.bd-banner-time {
+  color: #f5c84c;
+}
+
+/* Both buttons white */
+.bd-btn-reject,
+.bd-btn-accept {
+  background: #ffffff;
+  color: #0b1f3a;
+  border: 1px solid #ffffff;
+}
+
+/* Button hover */
+.bd-btn-reject:hover,
+.bd-btn-accept:hover {
+  background: #fff0cc;
+  color: #0b1f3a;
+  border-color: #fff0cc;
+}

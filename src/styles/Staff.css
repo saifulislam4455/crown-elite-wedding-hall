@@ -1,0 +1,447 @@
+
+/* =========================
+   STAFF PAGE
+========================= */
+
+.staff-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 32px;
+  background: #f7f6f3;
+  color: #191919;
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.staff-page * {
+  box-sizing: border-box;
+}
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.staff-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.staff-heading h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.staff-heading p {
+  margin: 0;
+  color: #55524e;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Invite button */
+
+.invite-staff-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 46px;
+  padding: 0 18px;
+  border: 1px solid #080d1b;
+  border-radius: 13px;
+  background: #080d1b;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.invite-staff-button:hover {
+  background: #20283a;
+}
+
+/* =========================
+   STAFF TABLE
+========================= */
+
+.staff-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 25px;
+  background: #ffffff;
+  border: 1px solid #e2ded7;
+  border-radius: 24px;
+}
+
+.staff-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+/* Table heading */
+
+.staff-table thead {
+  background: #efede9;
+}
+
+.staff-table th {
+  height: 43px;
+  padding: 0 17px;
+  color: #55524e;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid #e3dfd9;
+}
+
+.staff-table th:first-child {
+  padding-left: 17px;
+}
+
+/* Table rows */
+
+.staff-table td {
+  height: 63px;
+  padding: 10px 17px;
+  color: #55524e;
+  font-size: 13px;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e1db;
+}
+
+.staff-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.staff-table tbody tr {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.staff-table tbody tr:hover {
+  background: #fcfbf9;
+}
+
+.staff-table tbody tr.selected-staff-row {
+  background: #ffffff;
+}
+
+/* =========================
+   STAFF NAME & AVATAR
+========================= */
+
+.staff-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.staff-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff1cd;
+  color: #806600;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.staff-name-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.staff-name-details strong {
+  color: #191919;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.staff-name-details span {
+  color: #77736d;
+  font-size: 11px;
+}
+
+.staff-role {
+  color: #191919;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.staff-last-active {
+  color: #55524e !important;
+}
+
+/* =========================
+   STAFF STATUS
+========================= */
+
+.staff-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.staff-status.active {
+  color: #00845c;
+  background: #ddf4e8;
+}
+
+.staff-status.pending {
+  color: #b45a00;
+  background: #fff0d9;
+}
+
+.staff-status-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* =========================
+   THREE DOT MENU
+========================= */
+
+.staff-menu-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.staff-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e2ded7;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #191919;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.staff-menu-button:hover {
+  background: #f2f0ec;
+}
+
+.staff-action-menu {
+  position: absolute;
+  top: 43px;
+  right: 0;
+  z-index: 10;
+  width: 175px;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid #e2ded7;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.staff-action-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #191919;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.staff-action-menu button:hover {
+  background: #f4f2ee;
+}
+
+.staff-action-menu .staff-remove-action {
+  color: #c62b22;
+}
+
+/* =========================
+   PERMISSIONS CARD
+========================= */
+
+.staff-permissions-card {
+  width: 100%;
+  padding: 27px 25px 25px;
+  background: #ffffff;
+  border: 1px solid #e2ded7;
+  border-radius: 24px;
+}
+
+.staff-permissions-heading {
+  margin-bottom: 18px;
+}
+
+.staff-permissions-heading h2 {
+  margin: 0 0 6px;
+  color: #191919;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+
+.staff-permissions-heading p {
+  margin: 0;
+  color: #55524e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Permission grid */
+
+.staff-permissions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 24px;
+}
+
+.staff-permission-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 105px;
+  padding: 13px;
+  background: #efede9;
+  border-radius: 14px;
+}
+
+.staff-permission-item > span {
+  color: #191919;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   PERMISSION TOGGLE
+========================= */
+
+.staff-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 46px;
+  height: 27px;
+  flex-shrink: 0;
+  padding: 3px;
+  border: none;
+  border-radius: 30px;
+  background: #cfccc5;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.staff-toggle span {
+  display: block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s;
+}
+
+.staff-toggle.enabled {
+  background: #080d1b;
+}
+
+.staff-toggle.enabled span {
+  transform: translateX(19px);
+}
+
+.staff-toggle:focus-visible {
+  outline: 2px solid #806600;
+  outline-offset: 3px;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .staff-page {
+    padding: 25px;
+  }
+
+  .staff-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .staff-permissions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+  .staff-page {
+    padding: 18px 12px;
+  }
+
+  .staff-heading h1 {
+    font-size: 28px;
+  }
+
+  .staff-heading p {
+    font-size: 13px;
+  }
+
+  .invite-staff-button {
+    width: 100%;
+  }
+
+  .staff-table-wrapper {
+    border-radius: 16px;
+  }
+
+  .staff-permissions-card {
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  .staff-permissions-heading h2 {
+    font-size: 18px;
+  }
+
+  .staff-permissions-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .staff-permission-item {
+    min-height: 75px;
+    padding: 14px;
+  }
+}

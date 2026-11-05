@@ -1,0 +1,812 @@
+/* ==========================================================================
+   Inbox & Chat Page Styles (Crown Elite - Hall Partner)
+   ========================================================================== */
+
+
+
+/* Page Layout */
+.ib-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ----------------- SIDEBAR ----------------- */
+.ib-sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.ib-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+}
+
+.ib-brand-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #0b1329;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ib-brand-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.ib-brand-subtitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.ib-nav {
+  padding: 0 12px;
+  overflow-y: auto;
+}
+
+.ib-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 2px;
+  transition: all 0.15s ease;
+}
+
+.ib-nav-link:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.ib-nav-link.active {
+  background-color: #fef3c7;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.ib-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ib-badge {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+.ib-badge.gray {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.ib-nav-section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 18px 14px 6px 14px;
+}
+
+/* Gold Plan Box */
+.ib-plan-box {
+  margin: 16px;
+  padding: 16px;
+  background-color: #0b1528;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.ib-plan-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ib-plan-subtitle {
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}
+
+/* ----------------- TOP HEADER ----------------- */
+.ib-main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.ib-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #edf2f7;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ib-search-wrap {
+  position: relative;
+  width: 380px;
+}
+
+.ib-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.ib-search-input {
+  width: 100%;
+  padding: 9px 16px 9px 38px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #f1f5f9;
+  font-size: 13px;
+  outline: none;
+}
+
+.ib-search-input:focus {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.ib-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ib-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.ib-icon-btn:hover {
+  background-color: #f8fafc;
+}
+
+.ib-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #f59e0b;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.ib-user-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.ib-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fef08a;
+  color: #854d0e;
+  font-weight: 700;
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ib-user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ib-user-sub {
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+/* ----------------- INBOX MAIN DUAL PANE ----------------- */
+.ib-content {
+  padding: 24px 32px;
+  flex: 1;
+  display: flex;
+}
+
+.ib-chat-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  display: flex;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Left Column: Conversations List */
+.ib-threads-pane {
+  width: 340px;
+  border-right: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.ib-threads-header {
+  padding: 20px;
+}
+
+.ib-inbox-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 14px 0;
+}
+
+.ib-tabs {
+  display: inline-flex;
+  background-color: #f1f5f9;
+  padding: 3px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.ib-tab-btn {
+  flex: 1;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.ib-tab-btn.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Thread Items */
+.ib-threads-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.ib-thread-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f8fafc;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.ib-thread-item:hover {
+  background-color: #f8fafc;
+}
+
+.ib-thread-item.selected {
+  background-color: #fefce8; /* Warm light yellow highlight */
+}
+
+.ib-thread-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #fef08a;
+  color: #854d0e;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ib-thread-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ib-thread-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.ib-thread-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ib-thread-time {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.ib-thread-snippet {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0 0 6px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Status Badges */
+.ib-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.ib-pill.inquiry {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.ib-pill.booking {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.ib-pill.reschedule {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.ib-pill.quote {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.ib-pill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* ----------------- RIGHT CHAT COLUMN ----------------- */
+.ib-chat-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Header */
+.ib-chat-header {
+  padding: 16px 28px;
+  border-bottom: 1px solid #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ib-chat-user-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ib-chat-user-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ib-chat-user-sub {
+  font-size: 11.5px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+.ib-assigned-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+}
+
+/* Chat Messages Area */
+.ib-messages-body {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Incoming Message Bubble (Left) */
+.ib-msg-incoming {
+  align-self: flex-start;
+  max-width: 480px;
+  background-color: #f1f5f9;
+  border-radius: 20px;
+  border-top-left-radius: 6px;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+.ib-msg-time {
+  font-size: 10.5px;
+  color: #94a3b8;
+  margin-top: 6px;
+  text-align: left;
+}
+
+/* Outgoing Message Bubble (Right) */
+.ib-msg-outgoing {
+  align-self: flex-end;
+  max-width: 480px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border-radius: 20px;
+  border-top-right-radius: 6px;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ib-msg-time-out {
+  font-size: 10.5px;
+  color: #94a3b8;
+  margin-top: 6px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+/* ================= Custom Quote Card Widget ================= */
+.ib-quote-card {
+  align-self: flex-end;
+  width: 100%;
+  max-width: 540px;
+  border: 1.5px solid #fde047; /* Yellow border highlight */
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(253, 224, 71, 0.08);
+}
+
+.ib-quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ib-quote-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ib-quote-validity {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Quote Item Rows */
+.ib-quote-item {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+}
+
+.ib-quote-item-name {
+  font-weight: 600;
+  color: #1e293b;
+  flex: 1;
+}
+
+.ib-quote-item-calc {
+  color: #64748b;
+  font-size: 11.5px;
+  margin-right: 14px;
+}
+
+.ib-quote-item-price {
+  font-weight: 700;
+  color: #0f172a;
+  margin-right: 12px;
+}
+
+.ib-quote-trash-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.ib-quote-trash-btn:hover {
+  color: #ef4444;
+}
+
+.ib-btn-add-item {
+  background: transparent;
+  border: none;
+  color: #0f172a;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+/* Pricing Breakdown */
+.ib-quote-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.ib-quote-summary-row.total-row {
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.ib-quote-summary-row.total-row .label {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.ib-quote-summary-row.total-row .amount {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.ib-quote-summary-row.advance-row .amount {
+  color: #b45309; /* Warm Amber */
+  font-weight: 700;
+}
+
+.ib-quote-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ib-btn-save-draft {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ib-btn-save-draft:hover {
+  background-color: #f8fafc;
+}
+
+.ib-btn-send-quote {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ib-btn-send-quote:hover {
+  background-color: #000000;
+}
+
+/* ----------------- CHAT FOOTER & INPUT ----------------- */
+.ib-chat-footer {
+  padding: 16px 28px 20px 28px;
+  border-top: 1px solid #edf2f7;
+}
+
+/* Quick Action Suggestion Pills */
+.ib-quick-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ib-quick-pill {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ib-quick-pill:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Input Bar Controls */
+.ib-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ib-icon-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ib-icon-action-btn:hover {
+  background-color: #f8fafc;
+}
+
+.ib-quote-btn-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ib-quote-btn-pill:hover {
+  background-color: #f8fafc;
+}
+
+.ib-text-input-wrap {
+  flex: 1;
+}
+
+.ib-text-input {
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: #f1f5f9;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.ib-text-input:focus {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.ib-send-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #0f172a;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.ib-send-btn:hover {
+  background-color: #000000;
+}

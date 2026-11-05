@@ -1,0 +1,791 @@
+/* =========================
+   DOCUMENTS PAGE
+========================= */
+
+.documents-page {
+  min-height: 100vh;
+  background: #f7f6f2;
+  color: #191a1d;
+}
+
+/* Header */
+
+.partner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 87px;
+  padding: 0 3.2%;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e4de;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo-icon {
+  display: grid;
+  place-items: center;
+  width: 41px;
+  height: 41px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #030817;
+  color: #f6c84b;
+}
+
+.brand-logo-text h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.brand-logo-text span {
+  color: #77746e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.save-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5f5c56;
+  font-size: 13px;
+}
+
+.save-status svg {
+  color: #07875b;
+}
+
+.save-exit-button {
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+  color: #191a1d;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Main layout */
+
+.documents-layout {
+  display: grid;
+  grid-template-columns: 296px minmax(0, 1fr);
+  gap: 54px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 55px 6.25% 65px;
+}
+
+/* Sidebar */
+
+.onboarding-sidebar {
+  min-width: 0;
+  padding-top: 125px;
+}
+
+.steps-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 70px;
+  padding: 12px 13px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  color: #716e67;
+}
+
+.step-active {
+  min-height: 73px;
+  border-color: #e1ddd4;
+  background: #ffffff;
+  color: #191a1d;
+}
+
+.step-indicator {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #efede7;
+  color: #77746e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.step-completed .step-indicator {
+  background: #07835c;
+  color: #ffffff;
+}
+
+.step-active .step-indicator {
+  background: #030817;
+  color: #ffffff;
+}
+
+.step-copy {
+  min-width: 0;
+}
+
+.step-copy h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.step-copy p {
+  margin: 0;
+  color: #77746e;
+  font-size: 13px;
+}
+
+/* Help card */
+
+.help-card {
+  margin-top: 22px;
+  padding: 20px 18px;
+  border-radius: 19px;
+  background: #fff0c9;
+}
+
+.help-card > svg {
+  margin-bottom: 10px;
+  color: #806800;
+}
+
+.help-card h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+.help-card a {
+  color: #514d43;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.help-card p {
+  margin: 5px 0 0;
+  color: #514d43;
+  font-size: 13px;
+}
+
+/* Main content */
+
+.documents-main {
+  min-width: 0;
+}
+
+.step-label {
+  margin-bottom: 13px;
+  color: #806800;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.documents-main > h1 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 3vw, 38px);
+  font-weight: 750;
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+}
+
+.page-description {
+  margin: 0 0 27px;
+  color: #56534e;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Document cards */
+
+.document-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.document-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 93px;
+  padding: 17px 18px;
+  border: 1px solid #e1ded6;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.document-pending {
+  border-style: dashed;
+  border-color: #d4cfc4;
+}
+
+.document-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 14px;
+}
+
+.icon-success {
+  background: #dcf4e8;
+  color: #07835c;
+}
+
+.icon-progress {
+  background: #e3ebff;
+  color: #2855d9;
+}
+
+.icon-neutral {
+  background: #efede8;
+  color: #575650;
+}
+
+.document-information {
+  flex: 1;
+  min-width: 0;
+}
+
+.document-information h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.document-information p {
+  margin: 0;
+  color: #77746e;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.uploaded-file-name {
+  overflow-wrap: anywhere;
+}
+
+.uploading-label {
+  margin-bottom: 7px !important;
+  color: #2855d9 !important;
+}
+
+/* Progress bar */
+
+.progress-track {
+  width: 100%;
+  max-width: 340px;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eeece7;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #2855d9;
+  transition: width 0.15s linear;
+}
+
+/* Action buttons */
+
+.document-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.replace-button {
+  padding: 10px 0;
+  color: #806800;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.delete-button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 35px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #77746e;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: #c53030;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 110px;
+  min-height: 49px;
+  padding: 10px 17px;
+  border: 1px solid #cfcac0;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #191a1d;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background: #f7f6f2;
+}
+
+.cancel-button {
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+  color: #514e48;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Information and status messages */
+
+.document-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 26px;
+  color: #77746e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.document-notice svg {
+  flex-shrink: 0;
+}
+
+.notice-success-icon {
+  color: #07835c;
+}
+
+.notice-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.notice-info {
+  background: #efede7;
+  color: #514e48;
+}
+
+.notice-success {
+  background: #dcf4e8;
+  color: #086644;
+}
+
+.notice-error {
+  background: #fee8e7;
+  color: #a52222;
+}
+
+/* Footer */
+
+.documents-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 27px;
+}
+
+.back-button,
+.continue-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.back-button {
+  border: 1px solid #cfcac0;
+  background: #ffffff;
+  color: #191a1d;
+}
+
+.continue-button {
+  border: 1px solid #030817;
+  background: #030817;
+  color: #ffffff;
+}
+
+.continue-button:disabled {
+  border-color: #999b9e;
+  background: #999b9e;
+  cursor: not-allowed;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .documents-layout {
+    grid-template-columns: 235px minmax(0, 1fr);
+    gap: 30px;
+    padding: 40px 4%;
+  }
+
+  .onboarding-sidebar {
+    padding-top: 115px;
+  }
+
+  .step-item {
+    gap: 10px;
+    padding: 10px 8px;
+  }
+
+  .step-copy h3 {
+    font-size: 13px;
+  }
+
+  .documents-main > h1 {
+    font-size: 32px;
+  }
+
+  .document-card {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .document-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .document-information h3 {
+    font-size: 14px;
+  }
+
+  .document-actions {
+    gap: 8px;
+  }
+
+  .upload-button {
+    min-width: 95px;
+    padding: 10px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .partner-header {
+    min-height: 72px;
+    padding: 0 20px;
+  }
+
+  .brand-logo-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .brand-logo-text h2 {
+    font-size: 17px;
+  }
+
+  .brand-logo-text span {
+    font-size: 10px;
+  }
+
+  .header-actions {
+    gap: 15px;
+  }
+
+  .save-status {
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .save-exit-button {
+    font-size: 12px;
+  }
+
+  .documents-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 28px 20px 40px;
+  }
+
+  .onboarding-sidebar {
+    padding-top: 0;
+  }
+
+  .steps-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .step-item,
+  .step-active {
+    min-height: 66px;
+    padding: 9px;
+    border: 1px solid #e1ddd4;
+    border-radius: 12px;
+    background: #ffffff;
+  }
+
+  .step-indicator {
+    width: 29px;
+    height: 29px;
+  }
+
+  .step-copy h3 {
+    font-size: 12px;
+  }
+
+  .step-copy p {
+    font-size: 11px;
+  }
+
+  .help-card {
+    margin-top: 14px;
+    padding: 16px;
+  }
+
+  .documents-main > h1 {
+    font-size: 30px;
+    letter-spacing: -0.7px;
+  }
+
+  .page-description {
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+
+  .document-list {
+    gap: 11px;
+  }
+
+  .document-card {
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 0;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .document-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+  .document-information h3 {
+    font-size: 13px;
+  }
+
+  .document-information p {
+    font-size: 11px;
+  }
+
+  .document-actions {
+    gap: 5px;
+  }
+
+  .replace-button {
+    font-size: 12px;
+  }
+
+  .delete-button {
+    width: 24px;
+  }
+
+  .upload-button {
+    min-width: 0;
+    min-height: 39px;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .upload-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cancel-button {
+    font-size: 12px;
+  }
+
+  .documents-footer {
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .back-button,
+  .continue-button {
+    min-height: 49px;
+    gap: 7px;
+    padding: 11px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+
+  .continue-button {
+    flex: 1;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 420px) {
+  .partner-header {
+    padding: 0 12px;
+  }
+
+  .brand-logo {
+    gap: 7px;
+  }
+
+  .brand-logo-icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .brand-logo-text h2 {
+    font-size: 15px;
+  }
+
+  .brand-logo-text span {
+    font-size: 9px;
+  }
+
+  .header-actions {
+    gap: 9px;
+  }
+
+  .save-status {
+    font-size: 10px;
+  }
+
+  .save-status svg {
+    width: 14px;
+  }
+
+  .save-exit-button {
+    font-size: 11px;
+  }
+
+  .documents-layout {
+    padding: 24px 12px 32px;
+  }
+
+  .steps-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .step-item,
+  .step-active {
+    min-height: 57px;
+  }
+
+  .documents-main > h1 {
+    font-size: 27px;
+  }
+
+  .document-card {
+    gap: 8px;
+    padding: 12px 9px;
+  }
+
+  .document-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .document-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .document-information h3 {
+    font-size: 12px;
+  }
+
+  .document-information p {
+    font-size: 10px;
+  }
+
+  .upload-button {
+    flex-direction: column;
+    gap: 3px;
+    padding: 7px;
+  }
+
+  .replace-button {
+    font-size: 11px;
+  }
+
+  .delete-button svg {
+    width: 15px;
+  }
+
+  .documents-footer {
+    flex-wrap: wrap;
+  }
+
+  .back-button {
+    min-width: 90px;
+  }
+
+  .continue-button {
+    min-width: 0;
+  }
+}

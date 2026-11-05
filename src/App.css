@@ -1,0 +1,628 @@
+/* Main layout */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #191a1d;
+  background: #f7f6f2;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.signup-page {
+  display: grid;
+  grid-template-columns: 43.75% 56.25%;
+  min-height: 100vh;
+}
+
+/* Left side: Wedding hall image */
+
+.visual-panel {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 40px 8.5%;
+  overflow: hidden;
+  color: #fff;
+
+  background-image: url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=90");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.visual-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(39, 19, 7, 0.15) 0%,
+    rgba(39, 19, 7, 0.25) 35%,
+    rgba(15, 8, 14, 0.85) 77%,
+    rgba(3, 5, 17, 0.98) 100%
+  );
+}
+
+.visual-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.testimonial {
+  max-width: 550px;
+  margin: 0 0 17px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 2.25vw, 34px);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.5px;
+}
+
+.owner {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+
+.owner-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+  background: #fff0c9;
+  color: #806800;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.owner-info strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.owner-info p {
+  margin: 0;
+  color: #e1dedb;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Statistics */
+
+.hall-stats {
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr 1.2fr;
+  gap: 12px;
+}
+
+.hall-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hall-stats strong {
+  color: #f6c84b;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 700;
+}
+
+.hall-stats span {
+  color: #e4e0e0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Right side: Signup form */
+
+.form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 100vh;
+  padding: 55px clamp(30px, 7.5vw, 110px);
+
+  background: #f7f6f2;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 610px;
+}
+
+/* Brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 41px;
+  height: 41px;
+
+  border-radius: 11px;
+  background: #030817;
+  color: #f6c84b;
+}
+
+.brand-name h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.brand-name span {
+  display: block;
+  color: #77746e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Heading */
+
+.form-heading {
+  margin-bottom: 28px;
+}
+
+.form-heading h1 {
+  margin: 0 0 10px;
+
+  font-size: clamp(29px, 2.5vw, 38px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+.form-heading p {
+  margin: 0;
+  color: #5d5a55;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Form inputs */
+
+.form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.form-group {
+  min-width: 0;
+  margin-bottom: 25px;
+}
+
+.form-group > label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #202024;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  width: 100%;
+  height: 58px;
+  padding: 0 17px;
+
+  border: 1.5px solid #d5d1c8;
+  border-radius: 14px;
+
+  background: #fff;
+  color: #77746e;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: #030817;
+  box-shadow: 0 0 0 1px #030817;
+}
+
+.input-icon {
+  flex-shrink: 0;
+}
+
+.input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+  color: #222226;
+
+  font-size: 16px;
+}
+
+.input-wrapper input::placeholder {
+  color: #28282c;
+  opacity: 1;
+}
+
+/* Password */
+
+.password-group {
+  margin-bottom: 28px;
+}
+
+.password-wrapper {
+  border: 2px solid #030817;
+}
+
+.password-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  padding: 5px;
+
+  border: 0;
+  background: transparent;
+  color: #77746e;
+  cursor: pointer;
+}
+
+.password-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 9px;
+  color: #77746e;
+  font-size: 12px;
+}
+
+.strong-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #68655e;
+}
+
+/* Terms and conditions */
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 27px;
+
+  color: #303035;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.terms input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 25px;
+  height: 25px;
+
+  border: 1.5px solid #a6a39c;
+  border-radius: 6px;
+
+  background: #fff;
+  color: #fff;
+}
+
+.terms input:checked + .custom-checkbox {
+  border-color: #030817;
+  background: #030817;
+}
+
+.terms input:focus-visible + .custom-checkbox {
+  outline: 2px solid #806800;
+  outline-offset: 3px;
+}
+
+/* Create account button */
+
+.create-account-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 59px;
+  padding: 15px 20px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: #030817;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.create-account-btn:hover {
+  background: #171e31;
+}
+
+.create-account-btn:active {
+  transform: scale(0.99);
+}
+
+.form-message {
+  margin: 0 0 15px;
+  color: #806800;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Login */
+
+.login-text {
+  margin: 30px 0 0;
+  text-align: center;
+
+  color: #625f59;
+  font-size: 14px;
+}
+
+.login-text button {
+  padding: 0;
+  border: 0;
+
+  background: transparent;
+  color: #806800;
+
+  font-size: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.login-text button:hover {
+  text-decoration: underline;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .signup-page {
+    grid-template-columns: 40% 60%;
+  }
+
+  .visual-panel {
+    padding: 32px 6%;
+  }
+
+  .form-panel {
+    padding: 40px 35px;
+  }
+
+  .form-row {
+    gap: 12px;
+  }
+
+  .form-heading p {
+    font-size: 15px;
+  }
+
+  .input-wrapper {
+    gap: 9px;
+    padding: 0 12px;
+  }
+
+  .input-wrapper input {
+    font-size: 14px;
+  }
+
+  .hall-stats {
+    gap: 8px;
+  }
+
+  .hall-stats span {
+    font-size: 11px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .signup-page {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-panel {
+    min-height: 490px;
+    padding: 35px 25px;
+    background-position: center 40%;
+  }
+
+  .testimonial {
+    max-width: 500px;
+    font-size: clamp(27px, 6vw, 35px);
+  }
+
+  .hall-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .hall-stats strong {
+    font-size: clamp(20px, 5vw, 27px);
+  }
+
+  .hall-stats span {
+    font-size: 11px;
+  }
+
+  .form-panel {
+    min-height: auto;
+    padding: 45px 24px 50px;
+  }
+
+  .form-container {
+    max-width: 520px;
+  }
+
+  .brand {
+    margin-bottom: 28px;
+  }
+
+  .form-heading h1 {
+    font-size: 32px;
+  }
+
+  .form-heading p {
+    font-size: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+  .visual-panel {
+    min-height: 440px;
+    padding: 28px 20px;
+  }
+
+  .testimonial {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .owner {
+    gap: 10px;
+    margin-bottom: 23px;
+  }
+
+  .owner-info p {
+    font-size: 11px;
+  }
+
+  .hall-stats {
+    gap: 8px;
+  }
+
+  .hall-stats strong {
+    font-size: 20px;
+  }
+
+  .hall-stats span {
+    font-size: 10px;
+  }
+
+  .form-panel {
+    padding: 36px 20px;
+  }
+
+  .brand-name h2 {
+    font-size: 19px;
+  }
+
+  .form-heading h1 {
+    font-size: 29px;
+    letter-spacing: -0.7px;
+  }
+
+  .form-heading p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group {
+    margin-bottom: 21px;
+  }
+
+  .input-wrapper {
+    height: 55px;
+  }
+
+  .terms {
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .custom-checkbox {
+    width: 23px;
+    height: 23px;
+  }
+
+  .create-account-btn {
+    min-height: 56px;
+  }
+
+  .login-text {
+    margin-top: 25px;
+    font-size: 13px;
+  }
+}

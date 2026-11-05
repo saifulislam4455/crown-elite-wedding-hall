@@ -1,0 +1,290 @@
+
+/* ==========================================
+   CROWN ELITE - DASHBOARD SIDEBAR
+========================================== */
+
+.dashboard-sidebar {
+  width: 255px;
+  min-width: 255px;
+
+  height: auto;
+  min-height: 100vh;
+
+  background: #ffffff;
+  border-right: 1px solid #eae8e3;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  align-self: stretch;
+
+  overflow: visible;
+  box-sizing: border-box;
+
+  padding: 24px 14px 18px;
+
+  z-index: 50;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.dashboard-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 0 9px 28px;
+
+  flex-shrink: 0;
+}
+
+.dashboard-logo-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  border-radius: 11px;
+
+  background: #172b46;
+  color: #e7c47b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-logo h2 {
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 750;
+
+  color: #172b46;
+  letter-spacing: -0.3px;
+}
+
+.dashboard-logo span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  color: #a58a58;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.dashboard-navigation {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 auto;
+  min-height: auto;
+
+  overflow: visible;
+  padding: 0;
+
+  scrollbar-width: none;
+}
+
+.dashboard-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-group {
+  width: 100%;
+
+  margin-bottom: 23px;
+
+  flex-shrink: 0;
+}
+
+.nav-group-title {
+  margin: 0 0 10px;
+  padding: 0 12px;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.4px;
+  color: #a2a3a5;
+}
+
+/* ==========================================
+   NAVIGATION ITEMS
+========================================== */
+
+.nav-item {
+  width: 100%;
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 12px;
+  margin-bottom: 4px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #69717d;
+  text-decoration: none;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 550;
+
+  cursor: pointer;
+  text-align: left;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.nav-item:hover {
+  background: #f5f3ef;
+  color: #172b46;
+}
+
+.nav-item:active {
+  transform: scale(0.98);
+}
+
+/* Active navigation */
+
+.nav-item-active {
+  background: #f4f0e7;
+  color: #172b46;
+  font-weight: 700;
+}
+
+.nav-item-active:hover {
+  background: #eee8dc;
+}
+
+/* Icons */
+
+.nav-item-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.nav-item-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================
+   GOLD PLAN CARD
+========================================== */
+
+.plan-card {
+  width: 100%;
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  padding: 15px 14px;
+
+  border-radius: 11px;
+
+  background: #172b46;
+  color: #ffffff;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 5px 15px rgba(23, 43, 70, 0.10);
+}
+
+.plan-card strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  color: #e8c77e;
+}
+
+.plan-card p {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 1.6;
+
+  color: #d1d8e1;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: -270px;
+
+    width: 255px;
+    min-width: 255px;
+
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 22px 14px 18px;
+
+    transition: left 0.3s ease;
+
+    box-shadow: none;
+  }
+
+  .dashboard-sidebar.sidebar-open {
+    left: 0;
+
+    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .dashboard-navigation {
+    overflow: visible;
+  }
+
+  .plan-card {
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+}

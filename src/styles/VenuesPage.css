@@ -1,0 +1,805 @@
+
+/* =========================================
+   VENUES PAGE - MAIN CONTENT ONLY
+   Sidebar and Topbar are handled by DashboardLayout
+========================================= */
+
+.venues-content {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 28px 34px 45px;
+  background: #f8f7f4;
+  color: #191919;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PAGE HEADING */
+
+.venues-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.venues-heading h1 {
+  margin: 0 0 5px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -1.1px;
+  color: #171717;
+}
+
+.venues-heading p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #55534f;
+  font-size: 17px;
+}
+
+.venues-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #15966c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.venues-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.venues-heading-actions button {
+  height: 48px;
+  padding: 0 19px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.venues-preview-button {
+  color: #171717;
+  background: #fff;
+  border: 1px solid #d8d5ce;
+}
+
+.venues-preview-button:hover {
+  background: #f1f0ed;
+}
+
+.venues-save-button {
+  color: #fff;
+  background: #050b1b;
+  border: 1px solid #050b1b;
+}
+
+.venues-save-button:hover {
+  background: #17243d;
+}
+
+/* TABS */
+
+.venues-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 5px;
+  margin-bottom: 25px;
+  background: #eeece7;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.venues-tab {
+  min-height: 39px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #4e4c48;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.venues-tab:hover {
+  color: #111;
+}
+
+.venues-tab.active {
+  color: #111;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* HALL SECTION */
+
+.venues-halls {
+  width: 100%;
+}
+
+.venues-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.venues-section-heading h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.venues-section-heading p {
+  margin: 5px 0 0;
+  color: #77736d;
+  font-size: 14px;
+}
+
+.venues-count {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eeece7;
+  color: #514e48;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* HALL GRID */
+
+.venues-halls-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.venue-hall-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 116px;
+  padding: 17px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e3e0d9;
+  border-radius: 25px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.venue-hall-card:hover {
+  border-color: #d2cec5;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
+}
+
+/* HALL IMAGE */
+
+.venue-image-wrapper {
+  position: relative;
+  flex: 0 0 112px;
+  width: 112px;
+  height: 76px;
+  overflow: hidden;
+  border-radius: 13px;
+}
+
+.venue-hall-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* LIVE / DRAFT */
+
+.hall-live,
+.hall-draft {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hall-live {
+  color: #087a55;
+  background: #d9f4e8;
+}
+
+.hall-draft {
+  color: #94630b;
+  background: #fff0c9;
+}
+
+.hall-live span,
+.hall-draft span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* HALL DETAILS */
+
+.venue-hall-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.venue-hall-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.venue-hall-title h2 {
+  margin: 0;
+  color: #171717;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.venue-hall-title > span {
+  color: #77736d;
+  font-size: 12px;
+}
+
+.venue-hall-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 8px;
+}
+
+.venue-hall-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #55534f;
+  font-size: 13px;
+}
+
+.venue-hall-meta svg {
+  color: #57544e;
+  flex-shrink: 0;
+}
+
+.venue-hall-facilities {
+  margin: 0 0 9px;
+  color: #77736d;
+  font-size: 12px;
+}
+
+/* LUNCH / DINNER */
+
+.venue-time-slots {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.venue-time-slots span {
+  min-height: 34px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #222;
+  background: #fff;
+  border: 1px solid #e2ded7;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.venue-time-slots svg {
+  color: #171717;
+}
+
+/* ACTION BUTTONS */
+
+.venue-hall-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.venue-action-circle {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e3e0d9;
+  border-radius: 50%;
+  color: #171717;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.venue-action-circle:hover {
+  background: #f5f3ef;
+  border-color: #c9c4ba;
+}
+
+.venue-menu-wrapper {
+  position: relative;
+}
+
+.venue-dropdown {
+  position: absolute;
+  z-index: 20;
+  top: 45px;
+  right: 0;
+  width: 155px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #e5e1da;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.venue-dropdown button {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #333;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.venue-dropdown button:hover {
+  background: #f5f3ef;
+}
+
+/* COMBINED FLOOR */
+
+.venues-combined-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 16px 17px;
+  min-height: 74px;
+  box-sizing: border-box;
+  background: #fff1ca;
+  border-radius: 23px;
+}
+
+.combined-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #806400;
+}
+
+.combined-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.combined-content strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #171717;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.combined-content p {
+  margin: 0;
+  color: #5b5549;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.combined-edit-button {
+  min-width: 47px;
+  height: 34px;
+  padding: 0 13px;
+  border: 1px solid #d6cdb9;
+  border-radius: 9px;
+  background: #fff;
+  color: #171717;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.combined-edit-button:hover {
+  background: #f8f4e9;
+}
+
+/* ADD HALL */
+
+.venues-add-hall {
+  width: 100%;
+  min-height: 60px;
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1.5px dashed #d3cec3;
+  border-radius: 22px;
+  background: #fff;
+  color: #55514a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.venues-add-hall:hover:not(:disabled) {
+  border-color: #9b8a5b;
+  background: #fffdf8;
+}
+
+.venues-add-hall:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* OTHER TABS */
+
+.venues-tab-placeholder {
+  min-height: 300px;
+  padding: 45px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e3e0d9;
+  border-radius: 22px;
+}
+
+.venues-placeholder-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #806400;
+  background: #fff1ca;
+  border-radius: 18px;
+}
+
+.venues-tab-placeholder h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.venues-tab-placeholder p {
+  color: #77736d;
+  font-size: 14px;
+}
+
+.venues-tab-placeholder button {
+  margin-top: 12px;
+  padding: 11px 18px;
+  color: #fff;
+  background: #050b1b;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+/* EDIT MODAL */
+
+.venues-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.venues-edit-modal {
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.venues-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.venues-modal-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.venues-modal-header button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #f1f0ed;
+  cursor: pointer;
+}
+
+.venues-edit-modal label {
+  display: block;
+  margin: 14px 0 7px;
+  color: #393630;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.venues-edit-modal input {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border: 1px solid #ddd9d1;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+}
+
+.venues-edit-modal input:focus {
+  border-color: #a58a45;
+  box-shadow: 0 0 0 3px rgba(165, 138, 69, 0.1);
+}
+
+.venues-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.venues-modal-actions button {
+  min-height: 40px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-cancel {
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd9d1;
+}
+
+.modal-save {
+  color: #fff;
+  background: #050b1b;
+  border: 1px solid #050b1b;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .venues-content {
+    padding: 24px;
+  }
+
+  .venues-heading h1 {
+    font-size: 29px;
+  }
+
+  .venue-hall-card {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .venues-content {
+    padding: 20px 15px 35px;
+  }
+
+  .venues-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .venues-heading h1 {
+    font-size: 26px;
+  }
+
+  .venues-heading p {
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .venues-heading-actions {
+    width: 100%;
+  }
+
+  .venues-heading-actions button {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .venues-tabs {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .venue-hall-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 14px;
+    border-radius: 17px;
+  }
+
+  .venue-image-wrapper {
+    flex-basis: 100px;
+    width: 100px;
+    height: 75px;
+  }
+
+  .venue-hall-details {
+    flex: 1 1 calc(100% - 120px);
+  }
+
+  .venue-hall-title h2 {
+    font-size: 17px;
+  }
+
+  .venue-hall-meta {
+    gap: 9px 15px;
+  }
+
+  .venue-hall-actions {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+  }
+
+  .venue-action-circle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .venues-combined-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 17px;
+  }
+
+  .combined-content {
+    flex-basis: calc(100% - 50px);
+  }
+
+  .combined-edit-button {
+    margin-left: 43px;
+  }
+}
+
+@media (max-width: 480px) {
+  .venues-content {
+    padding: 17px 12px 30px;
+  }
+
+  .venues-heading h1 {
+    font-size: 23px;
+  }
+
+  .venues-heading-actions {
+    gap: 8px;
+  }
+
+  .venues-tab {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .venue-hall-card {
+    gap: 12px;
+  }
+
+  .venue-image-wrapper {
+    flex-basis: 85px;
+    width: 85px;
+    height: 70px;
+  }
+
+  .venue-hall-details {
+    flex-basis: 100%;
+  }
+
+  .venue-hall-actions {
+    top: 12px;
+    right: 12px;
+  }
+
+  .venue-hall-title {
+    padding-right: 70px;
+  }
+
+  .venue-hall-meta span {
+    font-size: 12px;
+  }
+
+  .venue-time-slots span {
+    min-height: 31px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .combined-content strong {
+    font-size: 13px;
+  }
+
+  .combined-content p {
+    font-size: 12px;
+  }
+
+  .venues-add-hall {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}

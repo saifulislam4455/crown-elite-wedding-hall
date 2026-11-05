@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Standalone Invoice Component Styles
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.invoice-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* Top Header & Buttons */
+.inv-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.inv-page-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.inv-page-subtitle {
+  font-size: 13.5px;
+  color: #64748b;
+  margin: 6px 0 0 0;
+}
+
+.inv-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inv-btn-sms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.inv-btn-sms:hover {
+  background-color: #f9fafb;
+}
+
+.inv-btn-download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #0f172a;
+  border: 1px solid #0f172a;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.inv-btn-download:hover {
+  background-color: #000000;
+}
+
+/* ================= White Invoice Card ================= */
+.inv-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Top Marquee & Invoice ID Info */
+.inv-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.inv-marquee-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.inv-marquee-address {
+  font-size: 12px;
+  color: #64748b;
+  margin: 4px 0 2px 0;
+}
+
+.inv-marquee-tax {
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.inv-card-top-right {
+  text-align: right;
+}
+
+.inv-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.8px;
+  margin: 0;
+}
+
+.inv-number {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 3px 0 2px 0;
+}
+
+.inv-date {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 3-Column Meta Grid (Bill to, Event, Booking) */
+.inv-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px 0 28px 0;
+}
+
+.inv-meta-label {
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin: 0 0 6px 0;
+}
+
+.inv-meta-main {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.inv-meta-sub {
+  font-size: 12px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+/* Invoice Items Table */
+.inv-table-wrap {
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.inv-table th {
+  background-color: #f8fafc;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.inv-table td {
+  padding: 16px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid #f8fafc;
+  color: #1e293b;
+}
+
+.inv-table tr:last-child td {
+  border-bottom: none;
+}
+
+.inv-table .col-right {
+  text-align: right;
+}
+
+.inv-table .col-center {
+  text-align: center;
+}
+
+/* Total & Summary Block (Right Aligned) */
+.inv-summary-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+}
+
+.inv-summary-box {
+  width: 320px;
+}
+
+.inv-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.inv-summary-row.total-row {
+  margin-bottom: 12px;
+}
+
+.inv-summary-row.total-row .label {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.inv-summary-row.total-row .amount {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.inv-summary-row.balance-row {
+  margin-top: 10px;
+}
+
+.inv-summary-row.balance-row .label {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.inv-summary-row.balance-row .amount {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #b45309; /* Warm Amber */
+}
+
+/* Payment Schedule Gray Box */
+.inv-schedule-card {
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+}
+
+.inv-schedule-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.inv-schedule-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.inv-schedule-row:last-child {
+  margin-bottom: 0;
+}
+
+.inv-schedule-row .amount {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Footer Policy Text */
+.inv-footer-policy {
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}

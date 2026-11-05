@@ -1,0 +1,547 @@
+
+/* =========================
+   PAYMENTS PAGE
+========================= */
+
+.payments-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 32px;
+  background: #f7f6f3;
+  color: #191919;
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.payments-page * {
+  box-sizing: border-box;
+}
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.payments-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.payments-heading h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin: 0 0 6px;
+}
+
+.payments-heading p {
+  font-size: 16px;
+  color: #55524e;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.payments-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Heading Buttons */
+
+.record-cash-button,
+.remind-overdue-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.record-cash-button {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d3cec6;
+}
+
+.record-cash-button:hover {
+  background: #f2f0ec;
+}
+
+.remind-overdue-button {
+  background: #080d1b;
+  color: #ffffff;
+  border: 1px solid #080d1b;
+}
+
+.remind-overdue-button:hover {
+  background: #20283a;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.payment-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.payment-summary-card {
+  min-width: 0;
+  min-height: 216px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5e1db;
+  border-radius: 18px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.055);
+}
+
+.payment-summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.payment-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: #fff1cd;
+  color: #806600;
+}
+
+/* Badge */
+
+.payment-summary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.payment-summary-badge.green {
+  color: #00845c;
+  background: #ddf4e8;
+}
+
+.payment-summary-badge.orange {
+  color: #b45a00;
+  background: #fff0d9;
+}
+
+.payment-summary-badge.red {
+  color: #c62b22;
+  background: #fde4e1;
+}
+
+.badge-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Summary Text */
+
+.payment-summary-label {
+  color: #55524e;
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.payment-summary-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.payment-summary-description {
+  color: #77736d;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================
+   FILTER TABS
+========================= */
+
+.payments-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  margin-bottom: 25px;
+  background: #efede9;
+  border-radius: 13px;
+}
+
+.payments-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #55524e;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.payments-tab span {
+  color: #77736d;
+  font-size: 12px;
+}
+
+.payments-tab.active {
+  background: #ffffff;
+  color: #191919;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.payments-tab:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.payments-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e2ded7;
+  border-radius: 24px;
+  margin-bottom: 25px;
+}
+
+.payments-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+/* Table Header */
+
+.payments-table thead {
+  background: #efede9;
+}
+
+.payments-table th {
+  height: 43px;
+  padding: 0 17px;
+  color: #55524e;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid #e3dfd9;
+}
+
+.payments-table th:first-child {
+  padding-left: 17px;
+}
+
+.payments-table th:last-child {
+  padding-right: 17px;
+}
+
+/* Table Body */
+
+.payments-table td {
+  height: 70px;
+  padding: 11px 17px;
+  font-size: 13px;
+  color: #242424;
+  border-bottom: 1px solid #e5e1db;
+  white-space: nowrap;
+}
+
+.payments-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.payments-table tbody tr:hover {
+  background: #fcfbf9;
+}
+
+/* Customer */
+
+.payment-customer,
+.payment-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.payment-customer strong,
+.payment-booking strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #171717;
+}
+
+.payment-customer span,
+.payment-booking span {
+  color: #77736d;
+  font-size: 11px;
+}
+
+/* Amount */
+
+.payment-amount {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Status */
+
+.payment-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.payment-status.late {
+  background: #fde4e1;
+  color: #c62b22;
+}
+
+.payment-status.today {
+  background: #fff0d9;
+  color: #b45a00;
+}
+
+.payment-status.paid {
+  background: #ddf4e8;
+  color: #00845c;
+}
+
+/* Row Actions */
+
+.payment-actions-heading {
+  width: 215px;
+}
+
+.payment-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-remind-button,
+.payment-record-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 37px;
+  padding: 0 12px;
+  border: 1px solid #d4cec5;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #191919;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.payment-remind-button:hover,
+.payment-record-button:hover {
+  background: #f4f2ee;
+  border-color: #bdb6ac;
+}
+
+.payments-empty {
+  text-align: center;
+  color: #77736d !important;
+  padding: 30px !important;
+}
+
+/* =========================
+   REMINDER BANNER
+========================= */
+
+.payment-reminder-banner {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+  min-height: 77px;
+  padding: 17px 20px;
+  background: #e3ebff;
+  color: #2455dc;
+  border-radius: 17px;
+}
+
+.payment-reminder-banner > svg {
+  flex-shrink: 0;
+}
+
+.payment-reminder-banner div {
+  flex: 1;
+  min-width: 0;
+}
+
+.payment-reminder-banner strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.payment-reminder-banner p {
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+  color: #2455dc;
+}
+
+.payment-reminder-banner button {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: #2455dc;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payment-reminder-banner button:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .payments-page {
+    padding: 25px;
+  }
+
+  .payments-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .payments-heading-actions {
+    flex-wrap: wrap;
+  }
+
+  .payment-summary-grid {
+    gap: 12px;
+  }
+
+  .payment-summary-card {
+    padding: 18px;
+  }
+
+  .payment-summary-card h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .payments-page {
+    padding: 18px 12px;
+  }
+
+  .payments-heading h1 {
+    font-size: 28px;
+  }
+
+  .payments-heading p {
+    font-size: 13px;
+  }
+
+  .payments-heading-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .record-cash-button,
+  .remind-overdue-button {
+    width: 100%;
+  }
+
+  .payment-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-summary-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .payment-summary-card h2 {
+    font-size: 25px;
+  }
+
+  .payments-tabs {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .payments-tab {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .payments-table-wrapper {
+    border-radius: 16px;
+  }
+
+  .payment-reminder-banner {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 12px;
+  }
+
+  .payment-reminder-banner p {
+    font-size: 10px;
+  }
+}
